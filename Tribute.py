@@ -98,11 +98,11 @@ class Tribute:
             self[BODY_INDEX[location]] = max(self[BODY_INDEX[location]] - amount, 0)
             self[0] = max(self[0] - amount, 0)
             if not self._is_alive():
-                print "%s is dead!" % self.profile.name
+                print("%s is dead!" % self.profile.name)
                 break
             else:
-                print "%s hitpoints: %d" % (location, self[BODY_INDEX[location]])
-                print "%s hitpoints: %d" % ('total', self[0])
+                print("%s hitpoints: %d" % (location, self[BODY_INDEX[location]]))
+                print("%s hitpoints: %d" % ('total', self[0]))
 
         
 
@@ -112,5 +112,5 @@ donny = Tribute( Profile("Donny Dingle", 180, 72, "An accomplished warrior.", "h
                  Armor("leather", "steel", "leather", "leather", "steel", "steel"),
                  Hitpoints(100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100) )
 
-print '\n' + str(donny)
-donny.take_damage(73, 'head larm rarm lleg torso'.split(' '))
+print( '\n' + str(donny) )
+donny.take_damage(18, 'head larm rarm lleg torso'.split(' '))
